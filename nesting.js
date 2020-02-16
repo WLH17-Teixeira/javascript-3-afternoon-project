@@ -82,8 +82,8 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 function removeDuplicates(){
   for(let i=0; i < workplaceAccidents.length; i++){
-    for( let j=0; j<workplaceAccidents.length; j++){
-      if(workplaceAccidents[i]===workplaceAccidents[j] && i !== j){
+    for( let j=i+1; j<workplaceAccidents.length; j++){
+      if(workplaceAccidents[i]===workplaceAccidents[j]){
         workplaceAccidents.splice(j,1)
       }
     }
