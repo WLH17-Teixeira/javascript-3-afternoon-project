@@ -76,7 +76,7 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 //Code Here
 let totalPopulation = populations.reduce(function(acc,curr){
   return acc + curr
-})
+},0)
 
 
 
@@ -102,8 +102,23 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 //Code Here
-let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+let myStrongest = monstersInYourPocket.filter((e)=>{
+  if(e.CP > 200){
+    return e
 
+  }
+})
+
+console.log(myStrongest)
+
+// other away
+
+// let myStrongest = monstersInYourPocket.filter((e)=>{
+//   if(e['CP'] > 200){
+//     return e
+
+//   }
+// })
 
 
 ////////// PROBLEM 5 //////////
@@ -139,6 +154,13 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
+let bobsTotal = purchases.reduce((acc,e)=> {
+  if(e.owner === 'Bob'){
+    acc = acc + e.price
+  }
+  return acc
+},0 )
+
+console.log(bobsTotal)
 
 
