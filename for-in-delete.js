@@ -145,7 +145,16 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+	
+for(let key in deleteTheBigNumbers){
+  if(deleteTheBigNumbers[key]>100){
+    // console.log(deleteTheBigNumbers[key])
+    delete deleteTheBigNumbers[key]
+  }
+}
+
+
+
 
 
 
@@ -174,5 +183,4 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
 
